@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vinnande Produkter — Butik (Pastelltema)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Vinnande Produkter</h1>
+      <nav>
+        <a href="#" id="homeLink">Hem</a>
+        <a href="#admin" id="adminLink">Admin</a>
+        <a href="#cart" id="cartLink">Kundvagn (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="product-list" class="grid"></section>
+
+    <!-- Product modal -->
+    <div id="product-modal" class="modal hidden" aria-hidden="true">
+      <div class="modal-content">
+        <button class="close" id="modal-close">✕</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Admin section -->
+    <section id="admin" class="admin-section hidden">
+      <h2>Admin — Lägg till produkt</h2>
+      <form id="admin-form">
+        <label>Produktnamn<input required name="title"></label>
+        <label>Beskrivning<textarea required name="desc"></textarea></label>
+        <label>Pris (SEK)<input required type="number" min="1" step="0.01" name="price"></label>
+        <label>Bild URL<input name="img"></label>
+        <button type="submit">Lägg till</button>
+      </form>
+      <div id="admin-msg" class="muted"></div>
+    </section>
+
+    <!-- Cart / Checkout -->
+    <section id="cart" class="hidden">
+      <h2>Kundvagn</h2>
+      <div id="cart-items"></div>
+      <div id="cart-summary" class="summary hidden">
+        <p>Totalt: <strong id="cart-total">0</strong> SEK</p>
+        <button id="checkout-btn">Gå till betalning (mock)</button>
+      </div>
+      <div id="checkout" class="hidden">
+        <h3>Betalning (demo)</h3>
+        <form id="checkout-form">
+          <label>Namn<input required name="name"></label>
+          <label>Email<input required type="email" name="email"></label>
+          <label>Adress<textarea required name="address"></textarea></label>
+          <button type="submit">Skicka order</button>
+        </form>
+        <div id="order-result" class="muted"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Demo — Ingen verklig betalning. Designad för att sälja redan vinnande produkter. Instruktioner finns i README.</small>
+    </div>
+  </footer>
+
+<script src="app.js"></script>
+</body>
+</html>
