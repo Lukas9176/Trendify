@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trendify - LED Ringlampa 26cm</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Trendify</h1>
+    <nav>
+      <a href="#product">Produkt</a>
+      <a href="#reviews">Recensioner</a>
+      <a href="#coming">Kommande Produkter</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Produktsektion -->
+    <section id="product" class="product-section">
+      <div class="product-image">
+        <img src="https://picsum.photos/seed/lamp/600/400" alt="LED Ringlampa 26cm">
+      </div>
+      <div class="product-info">
+        <h2>LED Ringlampa 26cm</h2>
+        <p>Perfekt för videoinspelning, selfies och streaming. Justerbar ljusstyrka och enkel att använda.</p>
+        <p>Pris: 249 SEK</p>
+        <a href="https://www.amazon.se/dp/B08EXAMPLE" target="_blank" class="btn-buy">Köp på Amazon</a>
+      </div>
+    </section>
+
+    <!-- Recensioner -->
+    <section id="reviews">
+      <h2>Recensioner</h2>
+      <form id="review-form">
+        <input type="text" id="name" placeholder="Ditt namn" required>
+        <textarea id="review" placeholder="Din recension" required></textarea>
+        <button type="submit">Skicka recension</button>
+      </form>
+      <div id="review-list"></div>
+    </section>
+
+    <!-- Kommande produkter -->
+    <section id="coming">
+      <h2>Kommande Produkter</h2>
+      <div class="product-grid">
+        <div class="coming-product">
+          <img src="https://picsum.photos/seed/blender/400/300" alt="Bärbar Smoothie Mixer">
+          <h3>Bärbar Smoothie Mixer</h3>
+          <p>Mini-blender med USB-laddning. Perfekt för hälsoköp.</p>
+        </div>
+        <div class="coming-product">
+          <img src="https://picsum.photos/seed/massage/400/300" alt="Massagepistol Mini">
+          <h3>Massagepistol Mini</h3>
+          <p>Kraftfull massage i fickformat — ofta "vinnare" på sociala plattformar.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Trendify – Alla rättigheter reserverade</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
